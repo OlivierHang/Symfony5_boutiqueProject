@@ -30,6 +30,7 @@ class RegisterController extends AbstractController
         // Creation du formulaire
         $form = $this->createForm(RegisterType::class, $user);
 
+        // Ecoute la requete http entrant ex : Post ect..
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
