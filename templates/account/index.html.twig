@@ -6,11 +6,12 @@
 {% block content %}
 	<h1>Mon compte</h1>
 	Bienvenue
+	{# app.user permet d'acceder à l'utilisateur #}
 	{{app.user.firstname}}
 	dans votre compte.<br/>
 	C'est dans cet espace que vous allez pouvoir gérer toutes vos informations personnelles.
 	<hr>
-	.. Modifier mon mot de passe<br>
+	<a href="{{path('account_password')}}">Modifier mon mot de passe</a><br>
 	.. Ajouter mes adresses<br>
 	.. Mes commandes<br>
 	<hr>
